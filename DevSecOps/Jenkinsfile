@@ -7,9 +7,8 @@ pipeline{
 
     tools {
         jdk 'JAVA17'
+        nodejs "Node"
     }
-
-    tools {nodejs "Node"}
 
     stages{
         stage("Code Checkout"){
