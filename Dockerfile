@@ -1,7 +1,6 @@
-FROM node:12.2.0-alpine
-WORKDIR app
+FROM node:21-alpine3.18
+WORKDIR test
 COPY . .
 RUN npm install
-RUN npm run test
 EXPOSE 8000
 CMD ["node","app.js"]
