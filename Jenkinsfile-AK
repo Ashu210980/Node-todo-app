@@ -9,10 +9,11 @@ pipeline {
                 echo "Cloning the Git Repo"
             }  
         }
-        stage("Build"){
+        stage("Build & Run the Image"){
             steps{
                 sh "docker build -t todo-node-app ."
-                echo "Building the Image"
+                sh "docker run -d --name node-todo-app -p 8000:8000 todo-node-app"
+                echo "Building & Running the Image"
             }
         }
     } 
