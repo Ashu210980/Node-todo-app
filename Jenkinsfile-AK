@@ -5,7 +5,7 @@ pipeline {
         
         stage("Git Clone"){
             steps{
-                git url: "https://github.com/Ashu210980/Node-todo-app.git", branch "master"
+                git url: "https://github.com/Ashu210980/Node-todo-app.git", branch: "master"
                 echo "Cloning the Git Repo"
             }  
         }
